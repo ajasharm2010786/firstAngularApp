@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style = "width:40%;float:left;border:solid 1px black;">
+  <h1>Uppercase Pipe</h1>
+  <b>{{title | uppercase}}</b><br/>
+</div>
+
+<div style = "width:10%"> Months :
+  <select (change) = "changemonths($event)">
+     <option *ngFor = "let i of months">{{i}}</option>
+  </select>
+</div>
+<br/>
+
+<div>
+  <span *ngIf = "isavailable; then condition1 else condition2">
+     Condition is valid.
+  </span>
+  <ng-template #condition1>Condition is valid</ng-template>
+  <ng-template #condition2>Condition is invalid</ng-template>
+</div>
+<button (click) = "myClickFunction($event)">Click Me</button>
+
+<app-new-cmp></app-new-cmp>
